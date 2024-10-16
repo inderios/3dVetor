@@ -1,14 +1,11 @@
 public class Vetorial {
- private record Vetor(float x, float y, float z) {
+ public record Vetor(float x, float y, float z) {
  };
- Vetor vetorA = new Vetor(-1, 2, 4);
- Vetor vetorB = new Vetor(1, 3, 5);
+
     public Vetor produtoVetorial(Vetor a, Vetor b) {
-        Vetor vetorA = new Vetor(-1, 2, 4);
-        Vetor vetorB = new Vetor(1, 3, 5);
         Vetor novoVetor = null;
         try {
-            novoVetor = geraMatrixes(vetorA, vetorB);
+            novoVetor = geraMatrixes(a, b);
         }catch (Exception e) {
             System.out.println(e.toString());
         }
