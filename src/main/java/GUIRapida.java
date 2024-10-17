@@ -7,6 +7,8 @@ import java.text.ParseException;
 
 public class GUIRapida extends JFrame {
 
+    //TODO: FAZER INTERFACE COM LITERALMENTE QUALQUER COISA MENOS JFRAME
+
     private JFormattedTextField inputField1;
     private JFormattedTextField inputField2;
     private JLabel resultLabel;
@@ -31,11 +33,14 @@ public class GUIRapida extends JFrame {
 
         MaskFormatter formatter = null;
         try {
+            //TODO: Mudar esse maskFormatter pra outra coisa
             formatter = new MaskFormatter("(#, #, #)");
             formatter.setPlaceholderCharacter('0'); // Placeholder para caracteres vazios
         } catch (ParseException e) {
             e.printStackTrace();
         }
+
+        //TODO: Centralizar os campos de texto
 
         // Campo de Texto 1 com formatação
         inputField1 = new JFormattedTextField(formatter);
@@ -81,6 +86,9 @@ public class GUIRapida extends JFrame {
 
     private void actionButton() {
         try {
+            //TODO: Mudar a lógica de valores, de inteiro voltar pra float
+            //TODO: Deixar possível colocar valores negativos
+
             // Obter e limpar os valores dos campos de texto
             String input1 = inputField1.getText().replaceAll("[^\\d,]", "");
             String input2 = inputField2.getText().replaceAll("[^\\d,]", "");
